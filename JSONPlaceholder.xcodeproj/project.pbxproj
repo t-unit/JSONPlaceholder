@@ -12,7 +12,9 @@
 		D235167B1F26268A006A99D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23516791F26268A006A99D2 /* Main.storyboard */; };
 		D235167D1F26268A006A99D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D235167C1F26268A006A99D2 /* Assets.xcassets */; };
 		D23516801F26268A006A99D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D235167E1F26268A006A99D2 /* LaunchScreen.storyboard */; };
-		D235168B1F26268B006A99D2 /* JSONPlaceholderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D235168A1F26268B006A99D2 /* JSONPlaceholderTests.swift */; };
+		D23516971F26271C006A99D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23516961F26271C006A99D2 /* User.swift */; };
+		D235169E1F262A35006A99D2 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D235169D1F262A35006A99D2 /* UserTests.swift */; };
+		D2BCDCC71F26304000468480 /* CLLocationCoordinate2D+Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BCDCC61F26304000468480 /* CLLocationCoordinate2D+Coding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +36,10 @@
 		D235167F1F26268A006A99D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D23516811F26268A006A99D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D23516861F26268B006A99D2 /* JSONPlaceholderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSONPlaceholderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D235168A1F26268B006A99D2 /* JSONPlaceholderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderTests.swift; sourceTree = "<group>"; };
 		D235168C1F26268B006A99D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D23516961F26271C006A99D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D235169D1F262A35006A99D2 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		D2BCDCC61F26304000468480 /* CLLocationCoordinate2D+Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Coding.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		D23516741F26268A006A99D2 /* JSONPlaceholder */ = {
 			isa = PBXGroup;
 			children = (
+				D23516951F262711006A99D2 /* Models */,
 				D23516751F26268A006A99D2 /* AppDelegate.swift */,
 				D23516771F26268A006A99D2 /* ViewController.swift */,
 				D23516791F26268A006A99D2 /* Main.storyboard */,
@@ -90,10 +95,27 @@
 		D23516891F26268B006A99D2 /* JSONPlaceholderTests */ = {
 			isa = PBXGroup;
 			children = (
-				D235168A1F26268B006A99D2 /* JSONPlaceholderTests.swift */,
 				D235168C1F26268B006A99D2 /* Info.plist */,
+				D235169D1F262A35006A99D2 /* UserTests.swift */,
 			);
 			path = JSONPlaceholderTests;
+			sourceTree = "<group>";
+		};
+		D23516951F262711006A99D2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2BCDCC51F26302D00468480 /* Extensions */,
+				D23516961F26271C006A99D2 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D2BCDCC51F26302D00468480 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D2BCDCC61F26304000468480 /* CLLocationCoordinate2D+Coding.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +171,7 @@
 					};
 					D23516851F26268B006A99D2 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						TestTargetID = D23516711F26268A006A99D2;
 					};
 				};
@@ -198,7 +221,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D23516781F26268A006A99D2 /* ViewController.swift in Sources */,
+				D2BCDCC71F26304000468480 /* CLLocationCoordinate2D+Coding.swift in Sources */,
 				D23516761F26268A006A99D2 /* AppDelegate.swift in Sources */,
+				D23516971F26271C006A99D2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D235168B1F26268B006A99D2 /* JSONPlaceholderTests.swift in Sources */,
+				D235169E1F262A35006A99D2 /* UserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,11 +405,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = F62JP9GW5J;
 				INFOPLIST_FILE = JSONPlaceholderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ottenweller.JSONPlaceholderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSONPlaceholder.app/JSONPlaceholder";
@@ -396,6 +423,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = F62JP9GW5J;
 				INFOPLIST_FILE = JSONPlaceholderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -426,6 +454,7 @@
 				D23516911F26268B006A99D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D23516921F26268B006A99D2 /* Build configuration list for PBXNativeTarget "JSONPlaceholderTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +463,7 @@
 				D23516941F26268B006A99D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
