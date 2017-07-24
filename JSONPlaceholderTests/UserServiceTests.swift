@@ -91,7 +91,7 @@ class UserServiceTests: XCTestCase {
         XCTAssert(fakeSession.lastTask?.didResume == true)
     }
     
-    func testCorrectEndpoing() {
+    func testCorrectEndpoint() {
         sut.fetch { _ in }
         XCTAssert(fakeSession.lastURL == URL(string: "https://jsonplaceholder.typicode.com/users"))
     }

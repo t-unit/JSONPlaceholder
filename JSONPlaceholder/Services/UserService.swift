@@ -15,11 +15,12 @@ protocol UserServing {
     func fetch(completionHandler: @escaping UserCompletion)
 }
 
-struct UserService: UserServing {
+struct UserService: UserServing, Service {
+
+    typealias M = [User]
 
     let session: TaskProviding
     let decoder = JSONDecoder()
-    let url = URL(string: "https://jsonplaceholder.typicode.com/users")!
     let callbackQueue = DispatchQueue.main
     
     init(session: TaskProviding = URLSession.shared) {
@@ -27,21 +28,7 @@ struct UserService: UserServing {
     }
     
     func fetch(completionHandler: @escaping UserCompletion) {
-        let task = session.dataTask(with: url) { (data, _, error) in
-            guard error == nil else {
-                self.callbackQueue.async { completionHandler(Result(error: error!)) }
-                return
-            }
-
-            // could be improved by checking response status code and supplying better errors based on it.
-            
-            do {
-                let users = try self.decoder.decode([User].self, from: data ?? Data())
-                self.callbackQueue.async { completionHandler(Result(value: users)) }
-            } catch {
-                self.callbackQueue.async { completionHandler(Result(error: error)) }
-            }
-        }
-        task.resume()
+        let url = URL(string: "https://jsonplaceholder.typicode.com/users")!
+        fetch(url: url, completionHandler: completionHandler)
     }
 }
