@@ -97,42 +97,42 @@ class UserServiceTests: XCTestCase {
     }
 
     func testSucceeds() {
-        var completionCalled = false
+        let expectation = XCTestExpectation()
 
         sut.fetch {
             XCTAssert($0.value != nil)
-            completionCalled = true
+            expectation.fulfill()
         }
 
         fakeSession.lastTask?.completionHandler(jsonData, nil, nil)
-        XCTAssertTrue(completionCalled)
+        XCTAssert(XCTWaiter.wait(for: [expectation], timeout: 5) == .completed)
     }
     
     func testFailsOnWrongData() {
-        var completionCalled = false
+        let expectation = XCTestExpectation()
         
         sut.fetch {
             XCTAssert($0.error != nil)
-            completionCalled = true
+            expectation.fulfill()
         }
         
         fakeSession.lastTask?.completionHandler(nil, nil, nil)
-        XCTAssertTrue(completionCalled)
+        XCTAssert(XCTWaiter.wait(for: [expectation], timeout: 5) == .completed)
     }
     
     func testFailsOnError() {
-        var completionCalled = false
+        let expectation = XCTestExpectation()
         
         sut.fetch {
             switch $0.error {
             case is FakeError: break
             default: XCTFail()
             }
-            completionCalled = true
+            expectation.fulfill()
         }
         
         fakeSession.lastTask?.completionHandler(jsonData, nil, FakeError.test)
-        XCTAssertTrue(completionCalled)
+        XCTAssert(XCTWaiter.wait(for: [expectation], timeout: 5) == .completed)
     }
 }
 

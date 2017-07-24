@@ -15,6 +15,7 @@ struct UserService {
     let session: TaskProviding
     let decoder = JSONDecoder()
     let url = URL(string: "https://jsonplaceholder.typicode.com/users")!
+    let callbackQueue = DispatchQueue.main
     
     init(session: TaskProviding = URLSession.shared) {
         self.session = session
@@ -23,7 +24,7 @@ struct UserService {
     func fetch(completionHandler: @escaping UserCompletion) {
         let task = session.dataTask(with: url) { (data, _, error) in
             guard error == nil else {
-                completionHandler(Result(error: error!))
+                self.callbackQueue.async { completionHandler(Result(error: error!)) }
                 return
             }
 
@@ -31,9 +32,9 @@ struct UserService {
             
             do {
                 let users = try self.decoder.decode([User].self, from: data ?? Data())
-                completionHandler(Result(value: users))
+                self.callbackQueue.async { completionHandler(Result(value: users)) }
             } catch {
-                completionHandler(Result(error: error))
+                self.callbackQueue.async { completionHandler(Result(error: error)) }
             }
         }
         task.resume()
