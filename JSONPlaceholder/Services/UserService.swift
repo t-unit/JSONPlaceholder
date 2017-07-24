@@ -20,10 +20,10 @@ struct UserService {
         self.session = session
     }
     
-    func fetch(completion: @escaping UserCompletion) {
-        let task = session.dataTask(with: url) { (data, response, error) in
+    func fetch(completionHandler: @escaping UserCompletion) {
+        let task = session.dataTask(with: url) { (data, _, error) in
             guard error == nil else {
-                completion(Result(error: error!))
+                completionHandler(Result(error: error!))
                 return
             }
 
@@ -31,9 +31,9 @@ struct UserService {
             
             do {
                 let users = try self.decoder.decode([User].self, from: data ?? Data())
-                completion(Result(value: users))
+                completionHandler(Result(value: users))
             } catch {
-                completion(Result(error: error))
+                completionHandler(Result(error: error))
             }
         }
         task.resume()
