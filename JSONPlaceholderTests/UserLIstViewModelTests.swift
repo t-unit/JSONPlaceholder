@@ -23,12 +23,12 @@ class UserListViewModelTests: XCTestCase {
     
     var userList: [User] {
         let coordinates1 = CLLocationCoordinate2D(latitude: 50, longitude: 10)
-        let address1 = User.Address(street: "Main Street", suite: "A", city: "New York", zipcode: "123", coordinates: coordinates1)
+        let address1 = User.Address(street: "Main Street", suite: "A", city: "New York", zipcode: "123", coordinate: coordinates1)
         let company1 = User.Company(name: "ASDF", catchPhrase: "QWERTY", bs: "exclusive data-driven AI matching")
         let user1 = User(identifier: 0, name: "Peter", username: "Pete", email: "pete@gmail.com", address: address1, phone: "0011", website: URL(string: "localhost")!, company: company1)
         
         let coordinates2 = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-        let address2 = User.Address(street: "2nd Street", suite: "33d", city: "New York", zipcode: "123", coordinates: coordinates2)
+        let address2 = User.Address(street: "2nd Street", suite: "33d", city: "New York", zipcode: "123", coordinate: coordinates2)
         let company2 = User.Company(name: "ASDF", catchPhrase: "QWERTY", bs: "exclusive data-driven AI matching")
         let user2 = User(identifier: 0, name: "Steve", username: "S", email: "s@gmail.com", address: address2, phone: "0011", website: URL(string: "google.com")!, company: company2)
         

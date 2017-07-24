@@ -74,8 +74,8 @@ class UserTests: XCTestCase {
         XCTAssertEqual(address?.city, "Gwenborough")
         XCTAssertEqual(address?.zipcode, "92998-3874")
         
-        XCTAssertEqual(address?.coordinates.latitude, -37.3159)
-        XCTAssertEqual(address?.coordinates.longitude, 81.1496)
+        XCTAssertEqual(address?.coordinate.latitude, -37.3159)
+        XCTAssertEqual(address?.coordinate.longitude, 81.1496)
     }
     
     func testCompanyProperties() {

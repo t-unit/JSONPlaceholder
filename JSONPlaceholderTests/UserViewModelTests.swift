@@ -18,7 +18,7 @@ class UserViewModelTests: XCTestCase {
 
     override func setUp() {
         let coordinates = CLLocationCoordinate2D(latitude: 50, longitude: 10)
-        let address = User.Address(street: "Main Street", suite: "A", city: "New York", zipcode: "123", coordinates: coordinates)
+        let address = User.Address(street: "Main Street", suite: "A", city: "New York", zipcode: "123", coordinate: coordinates)
         let company = User.Company(name: "ASDF", catchPhrase: "QWERTY", bs: "exclusive data-driven AI matching")
         let user = User(identifier: 0, name: "Peter", username: "Pete", email: "pete@gmail.com", address: address, phone: "0011", website: URL(string: "localhost")!, company: company)
         

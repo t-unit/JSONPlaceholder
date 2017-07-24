@@ -44,14 +44,14 @@ struct User: Codable {
             case suite
             case city
             case zipcode
-            case coordinates = "geo"
+            case coordinate = "geo"
         }
         
         let street: String
         let suite: String
         let city: String
         let zipcode: String
-        let coordinates: CLLocationCoordinate2D
+        let coordinate: CLLocationCoordinate2D
     }
     
     struct Company: Codable {
