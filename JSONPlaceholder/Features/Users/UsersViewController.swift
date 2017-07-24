@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  UsersViewController.swift
 //  JSONPlaceholder
 //
 //  Created by Tobias Ottenweller on 24.07.17.

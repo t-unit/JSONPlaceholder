@@ -12,9 +12,13 @@ struct UserService {
     
     typealias UserCompletion = (Result<[User], Error>) -> Void
     
-    let session = URLSession.shared
+    let session: TaskProviding
     let decoder = JSONDecoder()
     let url = URL(string: "https://jsonplaceholder.typicode.com/users")!
+    
+    init(session: TaskProviding = URLSession.shared) {
+        self.session = session
+    }
     
     func fetch(completion: @escaping UserCompletion) {
         let task = session.dataTask(with: url) { (data, response, error) in

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D22217E11F263D31006FBA53 /* TaskProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22217E01F263D31006FBA53 /* TaskProviding.swift */; };
 		D23516761F26268A006A99D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23516751F26268A006A99D2 /* AppDelegate.swift */; };
 		D23516781F26268A006A99D2 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23516771F26268A006A99D2 /* UsersViewController.swift */; };
 		D235167B1F26268A006A99D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23516791F26268A006A99D2 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D22217E01F263D31006FBA53 /* TaskProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProviding.swift; sourceTree = "<group>"; };
 		D23516721F26268A006A99D2 /* JSONPlaceholder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONPlaceholder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23516751F26268A006A99D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D23516771F26268A006A99D2 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +45,7 @@
 		D235169D1F262A35006A99D2 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		D2BCDCC61F26304000468480 /* CLLocationCoordinate2D+Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Coding.swift"; sourceTree = "<group>"; };
 		D2BCDCC91F26377300468480 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		D2BCDCCC1F26381600468480 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = "../../../Jaspr/jaspr-ios/Jaspr/Result.swift"; sourceTree = "<group>"; };
+		D2BCDCCC1F26381600468480 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +119,6 @@
 				D22217DE1F263C96006FBA53 /* Features */,
 				D23516951F262711006A99D2 /* Models */,
 				D2BCDCC81F26376000468480 /* Services */,
-				D2BCDCCB1F2637F500468480 /* Utils */,
 			);
 			path = JSONPlaceholder;
 			sourceTree = "<group>";
@@ -151,17 +152,11 @@
 		D2BCDCC81F26376000468480 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D2BCDCCC1F26381600468480 /* Result.swift */,
 				D2BCDCC91F26377300468480 /* UserService.swift */,
+				D22217E01F263D31006FBA53 /* TaskProviding.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		D2BCDCCB1F2637F500468480 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				D2BCDCCC1F26381600468480 /* Result.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +267,7 @@
 				D2BCDCC71F26304000468480 /* CLLocationCoordinate2D+Coding.swift in Sources */,
 				D23516761F26268A006A99D2 /* AppDelegate.swift in Sources */,
 				D23516971F26271C006A99D2 /* User.swift in Sources */,
+				D22217E11F263D31006FBA53 /* TaskProviding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
