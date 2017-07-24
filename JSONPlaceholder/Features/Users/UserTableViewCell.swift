@@ -22,15 +22,15 @@ class UserTableViewCell: UITableViewCell {
     }
 
     @IBOutlet
-    weak var nameLabel: UILabel!
+    private weak var nameLabel: UILabel!
 
     @IBOutlet
-    weak var usernameLabel: UILabel!
+    private weak var usernameLabel: UILabel!
 
     @IBOutlet
-    weak var emailLabel: UILabel!
+    private weak var emailLabel: UILabel!
 
     @IBOutlet
-    weak var addressLabel: UILabel!
+    private weak var addressLabel: UILabel!
 
 }

@@ -13,16 +13,16 @@ class UsersViewController: UIViewController {
     var viewModel = UserListViewModel()
 
     @IBOutlet
-    weak var tableView: UITableView!
+    private weak var tableView: UITableView!
 
     @IBOutlet
-    weak var loadingView: UIView!
+    private weak var loadingView: UIView!
     
     @IBOutlet
-    weak var errorView: UIView!
+    private weak var errorView: UIView!
     
     @IBOutlet
-    weak var errorLabel: UILabel!
+    private weak var errorLabel: UILabel!
     
     private var errorObserver: NSKeyValueObservation?
     private var loadingObserver: NSKeyValueObservation?
@@ -50,6 +50,8 @@ class UsersViewController: UIViewController {
     }
 
     private func setupView() {
+        title = "Users"
+
         let userCellNib = UINib(nibName: "UserTableViewCell", bundle: nil)
         tableView.register(userCellNib, forCellReuseIdentifier: UserTableViewCell.identifier)
     }

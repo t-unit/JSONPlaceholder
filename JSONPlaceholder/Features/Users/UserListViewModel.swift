@@ -8,11 +8,15 @@
 
 import Foundation
 
-@objcMembers
 class UserListViewModel: NSObject {
     
+    @objc
     dynamic private(set) var isLoading = false
+
+    @objc
     dynamic private(set) var errorText: String? = nil
+
+    @objc
     dynamic private(set) var userCount = 0
     
     private var userViewModels: [UserViewModel] = [] {
