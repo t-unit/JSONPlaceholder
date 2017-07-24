@@ -24,9 +24,9 @@ class UserListViewModel: NSObject {
             userCount = userViewModels.count
         }
     }
-    private let service: UserService
+    private let service: UserServing
     
-    init(service: UserService = UserService()) {
+    init(service: UserServing = UserService()) {
         self.service = service
     }
     

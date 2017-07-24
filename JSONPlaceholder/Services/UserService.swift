@@ -8,10 +8,15 @@
 
 import Foundation
 
-struct UserService {
-    
-    typealias UserCompletion = (Result<[User], Error>) -> Void
-    
+typealias UserCompletion = (Result<[User], Error>) -> Void
+
+protocol UserServing {
+
+    func fetch(completionHandler: @escaping UserCompletion)
+}
+
+struct UserService: UserServing {
+
     let session: TaskProviding
     let decoder = JSONDecoder()
     let url = URL(string: "https://jsonplaceholder.typicode.com/users")!

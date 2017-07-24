@@ -26,6 +26,8 @@
 		D2C84FCC1F265D4100C2E9EB /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C84FCA1F265D4100C2E9EB /* UserTableViewCell.xib */; };
 		D2C84FCE1F265D5700C2E9EB /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C84FCD1F265D5700C2E9EB /* User.storyboard */; };
 		D2C84FD01F266A6400C2E9EB /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C84FCF1F266A6400C2E9EB /* UserViewModelTests.swift */; };
+		D2C84FD21F26737400C2E9EB /* UserLIstViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C84FD11F26737400C2E9EB /* UserLIstViewModelTests.swift */; };
+		D2C84FD51F26740200C2E9EB /* FakeUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C84FD41F26740200C2E9EB /* FakeUserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		D2C84FCA1F265D4100C2E9EB /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		D2C84FCD1F265D5700C2E9EB /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		D2C84FCF1F266A6400C2E9EB /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
+		D2C84FD11F26737400C2E9EB /* UserLIstViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLIstViewModelTests.swift; sourceTree = "<group>"; };
+		D2C84FD41F26740200C2E9EB /* FakeUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,11 +151,12 @@
 		D23516891F26268B006A99D2 /* JSONPlaceholderTests */ = {
 			isa = PBXGroup;
 			children = (
-				D22217E41F263ED7006FBA53 /* FakeTaskProvider.swift */,
+				D2C84FD31F26739400C2E9EB /* Fakes */,
 				D235168C1F26268B006A99D2 /* Info.plist */,
 				D22217E21F263E3B006FBA53 /* UserServiceTests.swift */,
 				D235169D1F262A35006A99D2 /* UserTests.swift */,
 				D2C84FCF1F266A6400C2E9EB /* UserViewModelTests.swift */,
+				D2C84FD11F26737400C2E9EB /* UserLIstViewModelTests.swift */,
 			);
 			path = JSONPlaceholderTests;
 			sourceTree = "<group>";
@@ -181,6 +186,15 @@
 				D22217E01F263D31006FBA53 /* TaskProviding.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D2C84FD31F26739400C2E9EB /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				D22217E41F263ED7006FBA53 /* FakeTaskProvider.swift */,
+				D2C84FD41F26740200C2E9EB /* FakeUserService.swift */,
+			);
+			path = Fakes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,8 +319,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D22217E31F263E3B006FBA53 /* UserServiceTests.swift in Sources */,
+				D2C84FD51F26740200C2E9EB /* FakeUserService.swift in Sources */,
 				D2C84FD01F266A6400C2E9EB /* UserViewModelTests.swift in Sources */,
 				D22217E51F263ED7006FBA53 /* FakeTaskProvider.swift in Sources */,
+				D2C84FD21F26737400C2E9EB /* UserLIstViewModelTests.swift in Sources */,
 				D235169E1F262A35006A99D2 /* UserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

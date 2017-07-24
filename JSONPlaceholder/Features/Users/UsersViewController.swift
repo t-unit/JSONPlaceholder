@@ -57,16 +57,16 @@ class UsersViewController: UIViewController {
     }
     
     private func registerObservers() {
-        errorObserver = viewModel.observe(\UserListViewModel.errorText) { [weak self] observed, _ in
+        errorObserver = viewModel.observe(\.errorText) { [weak self] observed, _ in
             self?.errorView.isHidden = observed.errorText == nil
             self?.errorLabel.text = observed.errorText ?? nil
         }
         
-        loadingObserver = viewModel.observe(\UserListViewModel.isLoading) { [weak self] observed, _ in
+        loadingObserver = viewModel.observe(\.isLoading) { [weak self] observed, _ in
             self?.loadingView.isHidden = !observed.isLoading
         }
         
-        userCountObserver = viewModel.observe(\UserListViewModel.userCount) { [weak self] _, _ in
+        userCountObserver = viewModel.observe(\.userCount) { [weak self] _, _ in
             self?.tableView.reloadData()
         }
     }
