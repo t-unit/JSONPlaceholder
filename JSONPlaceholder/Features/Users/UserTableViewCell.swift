@@ -11,22 +11,26 @@ import UIKit
 class UserTableViewCell: UITableViewCell {
     
     static let identifier = "UserTableViewCell"
-    
+
     var viewModel: UserViewModel! {
         didSet {
-            textLabel?.text = viewModel.name
+            nameLabel.text = viewModel.name
+            usernameLabel.text = viewModel.username
+            emailLabel.text = viewModel.email
+            addressLabel.text = viewModel.address
         }
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet
+    weak var nameLabel: UILabel!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    @IBOutlet
+    weak var usernameLabel: UILabel!
 
-        // Configure the view for the selected state
-    }
-    
+    @IBOutlet
+    weak var emailLabel: UILabel!
+
+    @IBOutlet
+    weak var addressLabel: UILabel!
+
 }
