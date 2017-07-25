@@ -7,7 +7,7 @@ This project requires **Xcode 9**. There are no dependencies, so no need for any
 
 ## The Good
 
- Working with the new Swift 4 KVO and `Coding` API worked very well. Nice to finally doing JSON parsing without a 3rd party library.
+ Playing around with the new Swift 4 `KVO` and `Coding` API worked very well. Nice to finally do JSON parsing without a 3rd party library.
  This was also the first time I worked with `XCTWaiter`.
 
 ## The Bad
