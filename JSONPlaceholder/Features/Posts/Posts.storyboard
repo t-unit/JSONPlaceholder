@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Posts View Controller-->
+        <!--Posts-->
         <scene sceneID="NIi-gf-j60">
             <objects>
-                <viewController id="Aga-W3-i63" customClass="PostsViewController" customModule="JSONPlaceholder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Posts" id="Aga-W3-i63" customClass="PostsViewController" customModule="JSONPlaceholder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="BlT-wo-9b1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

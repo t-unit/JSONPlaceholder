@@ -44,8 +44,6 @@ class PostsViewController: UIViewController {
     }
     
     private func setupView() {
-        title = "Posts"
-        
         let userCellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableView.register(userCellNib, forCellReuseIdentifier: PostTableViewCell.identifier)
     }

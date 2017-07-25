@@ -50,8 +50,6 @@ class UsersViewController: UIViewController {
     }
 
     private func setupView() {
-        title = "Users"
-
         let userCellNib = UINib(nibName: "UserTableViewCell", bundle: nil)
         tableView.register(userCellNib, forCellReuseIdentifier: UserTableViewCell.identifier)
     }
