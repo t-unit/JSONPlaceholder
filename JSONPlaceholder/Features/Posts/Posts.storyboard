@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aga-W3-i63">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Posts View Controller-->
+        <scene sceneID="NIi-gf-j60">
+            <objects>
+                <viewController id="Aga-W3-i63" customClass="PostsViewController" customModule="JSONPlaceholder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="BlT-wo-9b1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ezu-Ee-84v">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Aga-W3-i63" id="Zq7-RR-i5t"/>
+                                    <outlet property="delegate" destination="Aga-W3-i63" id="KzT-GU-JmW"/>
+                                </connections>
+                            </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Spe-8W-EHa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Tkv-eF-gNm">
+                                        <rect key="frame" x="177" y="313" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Tkv-eF-gNm" firstAttribute="centerY" secondItem="Spe-8W-EHa" secondAttribute="centerY" id="Kec-2n-90r"/>
+                                    <constraint firstItem="Tkv-eF-gNm" firstAttribute="centerX" secondItem="Spe-8W-EHa" secondAttribute="centerX" id="dLV-9D-1iL"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JBF-3h-Lzt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8fQ-62-ZRb">
+                                        <rect key="frame" x="164" y="298.5" width="46" height="50.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="ZvN-K2-Pfk">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrT-R8-4Rj" userLabel="retry">
+                                                <rect key="frame" x="0.0" y="20.5" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="retryButtonTouchUpInside:" destination="Aga-W3-i63" eventType="touchUpInside" id="1gd-yD-Jqa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="8fQ-62-ZRb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JBF-3h-Lzt" secondAttribute="top" constant="20" symbolic="YES" id="0C0-aC-HKI"/>
+                                    <constraint firstItem="8fQ-62-ZRb" firstAttribute="centerY" secondItem="JBF-3h-Lzt" secondAttribute="centerY" id="0Hm-Ka-SAS"/>
+                                    <constraint firstItem="8fQ-62-ZRb" firstAttribute="centerX" secondItem="JBF-3h-Lzt" secondAttribute="centerX" id="3st-W9-IBH"/>
+                                    <constraint firstItem="8fQ-62-ZRb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JBF-3h-Lzt" secondAttribute="leading" constant="20" symbolic="YES" id="7Km-zk-ToX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3Gt-Go-Cmo" firstAttribute="trailing" secondItem="Spe-8W-EHa" secondAttribute="trailing" id="1Re-V6-Rty"/>
+                            <constraint firstItem="Ezu-Ee-84v" firstAttribute="top" secondItem="BlT-wo-9b1" secondAttribute="top" id="HtA-cD-go0"/>
+                            <constraint firstItem="3Gt-Go-Cmo" firstAttribute="bottom" secondItem="Spe-8W-EHa" secondAttribute="bottom" id="J7c-kB-4rk"/>
+                            <constraint firstItem="JBF-3h-Lzt" firstAttribute="top" secondItem="3Gt-Go-Cmo" secondAttribute="top" id="KQR-wR-Q3X"/>
+                            <constraint firstItem="3Gt-Go-Cmo" firstAttribute="bottom" secondItem="JBF-3h-Lzt" secondAttribute="bottom" id="cLA-dp-jeY"/>
+                            <constraint firstItem="Spe-8W-EHa" firstAttribute="top" secondItem="3Gt-Go-Cmo" secondAttribute="top" id="efV-cY-hl0"/>
+                            <constraint firstAttribute="bottom" secondItem="Ezu-Ee-84v" secondAttribute="bottom" id="gB3-Ao-Nr9"/>
+                            <constraint firstItem="Spe-8W-EHa" firstAttribute="leading" secondItem="3Gt-Go-Cmo" secondAttribute="leading" id="lN3-j7-bIS"/>
+                            <constraint firstItem="Ezu-Ee-84v" firstAttribute="leading" secondItem="3Gt-Go-Cmo" secondAttribute="leading" id="nqw-57-quJ"/>
+                            <constraint firstItem="JBF-3h-Lzt" firstAttribute="leading" secondItem="3Gt-Go-Cmo" secondAttribute="leading" id="r7n-qZ-Ok6"/>
+                            <constraint firstItem="3Gt-Go-Cmo" firstAttribute="trailing" secondItem="Ezu-Ee-84v" secondAttribute="trailing" id="sjA-iq-Aln"/>
+                            <constraint firstItem="3Gt-Go-Cmo" firstAttribute="trailing" secondItem="JBF-3h-Lzt" secondAttribute="trailing" id="wja-vM-ybX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Gt-Go-Cmo"/>
+                    </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="ZvN-K2-Pfk" id="abn-rg-13Y"/>
+                        <outlet property="errorView" destination="JBF-3h-Lzt" id="3DI-vB-y4s"/>
+                        <outlet property="loadingView" destination="Spe-8W-EHa" id="Qde-fa-9rs"/>
+                        <outlet property="tableView" destination="Ezu-Ee-84v" id="pX4-Gs-LAO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cF-vx-LvO" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

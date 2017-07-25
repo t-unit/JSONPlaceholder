@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D21DBC111F2682B9000C5F55 /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D21DBC101F2682B9000C5F55 /* Posts.storyboard */; };
+		D21DBC131F2682D3000C5F55 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DBC121F2682D3000C5F55 /* PostsViewController.swift */; };
+		D21DBC151F26843D000C5F55 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DBC141F26843D000C5F55 /* PostListViewModel.swift */; };
+		D21DBC171F2684C7000C5F55 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DBC161F2684C7000C5F55 /* PostViewModel.swift */; };
+		D21DBC1C1F268591000C5F55 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DBC1A1F268591000C5F55 /* PostTableViewCell.swift */; };
+		D21DBC1D1F268591000C5F55 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D21DBC1B1F268591000C5F55 /* PostTableViewCell.xib */; };
 		D22217E11F263D31006FBA53 /* TaskProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22217E01F263D31006FBA53 /* TaskProviding.swift */; };
 		D22217E31F263E3B006FBA53 /* UserServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22217E21F263E3B006FBA53 /* UserServiceTests.swift */; };
 		D22217E51F263ED7006FBA53 /* FakeTaskProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22217E41F263ED7006FBA53 /* FakeTaskProvider.swift */; };
@@ -24,7 +30,7 @@
 		D2BCDCCD1F26381600468480 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BCDCCC1F26381600468480 /* Result.swift */; };
 		D2C84FCB1F265D4100C2E9EB /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C84FC91F265D4100C2E9EB /* UserTableViewCell.swift */; };
 		D2C84FCC1F265D4100C2E9EB /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C84FCA1F265D4100C2E9EB /* UserTableViewCell.xib */; };
-		D2C84FCE1F265D5700C2E9EB /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C84FCD1F265D5700C2E9EB /* User.storyboard */; };
+		D2C84FCE1F265D5700C2E9EB /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C84FCD1F265D5700C2E9EB /* Users.storyboard */; };
 		D2C84FD01F266A6400C2E9EB /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C84FCF1F266A6400C2E9EB /* UserViewModelTests.swift */; };
 		D2C84FD21F26737400C2E9EB /* UserLIstViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C84FD11F26737400C2E9EB /* UserLIstViewModelTests.swift */; };
 		D2C84FD51F26740200C2E9EB /* FakeUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C84FD41F26740200C2E9EB /* FakeUserService.swift */; };
@@ -46,6 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D21DBC101F2682B9000C5F55 /* Posts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
+		D21DBC121F2682D3000C5F55 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		D21DBC141F26843D000C5F55 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
+		D21DBC161F2684C7000C5F55 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		D21DBC1A1F268591000C5F55 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		D21DBC1B1F268591000C5F55 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		D22217E01F263D31006FBA53 /* TaskProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProviding.swift; sourceTree = "<group>"; };
 		D22217E21F263E3B006FBA53 /* UserServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTests.swift; sourceTree = "<group>"; };
 		D22217E41F263ED7006FBA53 /* FakeTaskProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTaskProvider.swift; sourceTree = "<group>"; };
@@ -67,7 +79,7 @@
 		D2BCDCCC1F26381600468480 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		D2C84FC91F265D4100C2E9EB /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		D2C84FCA1F265D4100C2E9EB /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
-		D2C84FCD1F265D5700C2E9EB /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		D2C84FCD1F265D5700C2E9EB /* Users.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Users.storyboard; sourceTree = "<group>"; };
 		D2C84FCF1F266A6400C2E9EB /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
 		D2C84FD11F26737400C2E9EB /* UserLIstViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLIstViewModelTests.swift; sourceTree = "<group>"; };
 		D2C84FD41F26740200C2E9EB /* FakeUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUserService.swift; sourceTree = "<group>"; };
@@ -96,6 +108,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D21DBC0F1F26827A000C5F55 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				D21DBC141F26843D000C5F55 /* PostListViewModel.swift */,
+				D21DBC101F2682B9000C5F55 /* Posts.storyboard */,
+				D21DBC121F2682D3000C5F55 /* PostsViewController.swift */,
+				D21DBC1A1F268591000C5F55 /* PostTableViewCell.swift */,
+				D21DBC1B1F268591000C5F55 /* PostTableViewCell.xib */,
+				D21DBC161F2684C7000C5F55 /* PostViewModel.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
 		D22217DD1F263C76006FBA53 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +135,7 @@
 		D22217DE1F263C96006FBA53 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D21DBC0F1F26827A000C5F55 /* Posts */,
 				D22217DF1F263CCD006FBA53 /* Users */,
 			);
 			path = Features;
@@ -118,7 +144,7 @@
 		D22217DF1F263CCD006FBA53 /* Users */ = {
 			isa = PBXGroup;
 			children = (
-				D2C84FCD1F265D5700C2E9EB /* User.storyboard */,
+				D2C84FCD1F265D5700C2E9EB /* Users.storyboard */,
 				D22217E61F264D1B006FBA53 /* UserListViewModel.swift */,
 				D23516771F26268A006A99D2 /* UsersViewController.swift */,
 				D2C84FC91F265D4100C2E9EB /* UserTableViewCell.swift */,
@@ -294,9 +320,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21DBC111F2682B9000C5F55 /* Posts.storyboard in Resources */,
 				D2C84FCC1F265D4100C2E9EB /* UserTableViewCell.xib in Resources */,
-				D2C84FCE1F265D5700C2E9EB /* User.storyboard in Resources */,
+				D2C84FCE1F265D5700C2E9EB /* Users.storyboard in Resources */,
 				D23516801F26268A006A99D2 /* LaunchScreen.storyboard in Resources */,
+				D21DBC1D1F268591000C5F55 /* PostTableViewCell.xib in Resources */,
 				D235167D1F26268A006A99D2 /* Assets.xcassets in Resources */,
 				D235167B1F26268A006A99D2 /* Main.storyboard in Resources */,
 			);
@@ -316,7 +344,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21DBC171F2684C7000C5F55 /* PostViewModel.swift in Sources */,
+				D21DBC131F2682D3000C5F55 /* PostsViewController.swift in Sources */,
+				D21DBC1C1F268591000C5F55 /* PostTableViewCell.swift in Sources */,
 				D2BCDCCD1F26381600468480 /* Result.swift in Sources */,
+				D21DBC151F26843D000C5F55 /* PostListViewModel.swift in Sources */,
 				D2C84FDD1F267E2A00C2E9EB /* Service.swift in Sources */,
 				D2C84FD71F267AE100C2E9EB /* Post.swift in Sources */,
 				D23516781F26268A006A99D2 /* UsersViewController.swift in Sources */,

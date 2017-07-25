@@ -1,5 +1,5 @@
 //
-//  UsersViewModel.swift
+//  PostListViewModel.swift
 //  JSONPlaceholder
 //
 //  Created by Tobias Ottenweller on 24.07.17.
@@ -8,58 +8,54 @@
 
 import Foundation
 
-class UserListViewModel: NSObject {
+class PostListViewModel: NSObject {
     
     @objc
     dynamic private(set) var isLoading = false
-
+    
     @objc
     dynamic private(set) var errorText: String? = nil
-
-    @objc
-    dynamic private(set) var userCount = 0
     
-    private var userViewModels: [UserViewModel] = [] {
+    @objc
+    dynamic private(set) var postCount = 0
+    
+    private var postViewModels: [PostViewModel] = [] {
         didSet {
-            userCount = userViewModels.count
+            postCount = postViewModels.count
         }
     }
-    private let service: UserServing
+    private let service: PostServing
+    private let userIdentifier: Int
     
-    init(service: UserServing = UserService()) {
+    init(userIdentifier: Int, service: PostServing = PostService()) {
         self.service = service
+        self.userIdentifier = userIdentifier
     }
     
     func appear() {
-        if userCount == 0 || errorText != nil {
-            load()
-        }
+        load()
     }
     
-    func userViewModel(at indexPath: IndexPath) -> UserViewModel {
-        return userViewModels[indexPath.row]
+    func postViewModel(at indexPath: IndexPath) -> PostViewModel {
+        return postViewModels[indexPath.row]
     }
     
     func retry() {
         errorText = nil
         load()
     }
-
-    func didSelect(at: IndexPath) {
-        
-    }
-
+    
     private func load() {
         isLoading = true
         
-        service.fetch { [weak self] result in
+        service.fetch(userIdentifier: userIdentifier) { [weak self] result in
             self?.isLoading = false
-
+            
             switch result {
             case .failure(let err):
                 self?.errorText = err.localizedDescription
             case .success(let users):
-                self?.userViewModels = users.map { UserViewModel(user: $0) }
+                self?.postViewModels = users.map { PostViewModel(post: $0) }
             }
         }
     }
