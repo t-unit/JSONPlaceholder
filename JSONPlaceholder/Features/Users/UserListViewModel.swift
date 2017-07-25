@@ -19,6 +19,15 @@ class UserListViewModel: NSObject {
     @objc
     dynamic private(set) var userCount = 0
     
+    @objc
+    dynamic private(set) var postListViewModel: PostListViewModel?
+    
+    private var users: [User] = [] {
+        didSet {
+            userViewModels = users.map { UserViewModel(user: $0) }
+        }
+    }
+    
     private var userViewModels: [UserViewModel] = [] {
         didSet {
             userCount = userViewModels.count
@@ -45,8 +54,8 @@ class UserListViewModel: NSObject {
         load()
     }
 
-    func didSelect(at: IndexPath) {
-        
+    func didSelect(at indexPath: IndexPath) {
+        postListViewModel = PostListViewModel(userIdentifier: users[indexPath.row].identifier)
     }
 
     private func load() {
@@ -59,7 +68,7 @@ class UserListViewModel: NSObject {
             case .failure(let err):
                 self?.errorText = err.localizedDescription
             case .success(let users):
-                self?.userViewModels = users.map { UserViewModel(user: $0) }
+                self?.users = users
             }
         }
     }

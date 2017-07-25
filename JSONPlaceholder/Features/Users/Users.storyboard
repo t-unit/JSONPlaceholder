@@ -91,10 +91,19 @@
                         <outlet property="errorView" destination="hlD-Gj-TuY" id="xzg-k1-rNa"/>
                         <outlet property="loadingView" destination="fe1-Dz-dIc" id="ui6-3g-DUV"/>
                         <outlet property="tableView" destination="mrf-sT-D1f" id="g4q-wH-WIe"/>
+                        <segue destination="THk-PD-Bii" kind="show" identifier="posts" id="HFn-uz-Cu2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Jf-py-Ajn" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Posts-->
+        <scene sceneID="2Z4-SN-MCT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Posts" id="THk-PD-Bii" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNV-NE-XlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="137"/>
         </scene>
     </scenes>
 </document>

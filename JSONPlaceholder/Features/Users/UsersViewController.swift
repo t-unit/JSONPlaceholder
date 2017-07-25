@@ -33,9 +33,15 @@ class UsersViewController: UIViewController {
         registerObservers()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         viewModel.appear()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PostsViewController {
+            destination.viewModel = viewModel.postListViewModel!
+        }
     }
 
     @IBAction
@@ -66,6 +72,13 @@ class UsersViewController: UIViewController {
             self?.tableView.reloadData()
         }
         observers.append(userCountObserver)
+        
+        let postsObserver = viewModel.observe(\.postListViewModel) { [weak self] observed, _ in
+            if observed.postListViewModel != nil {
+                self?.performSegue(withIdentifier: "posts", sender: self)
+            }
+        }
+        observers.append(postsObserver)
     }
 }
 
@@ -73,6 +86,7 @@ extension UsersViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelect(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
