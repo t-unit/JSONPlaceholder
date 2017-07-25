@@ -19,14 +19,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="477" height="146.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyW-8u-Tr6">
-                        <rect key="frame" x="8" y="8" width="42" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyW-8u-Tr6">
+                        <rect key="frame" x="8" y="8" width="449" height="20.5"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMd-Dd-kgp">
-                        <rect key="frame" x="8" y="38.5" width="42" height="98"/>
+                        <rect key="frame" x="8" y="38.5" width="449" height="98"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -37,6 +37,7 @@
                     <constraint firstAttribute="bottom" secondItem="PMd-Dd-kgp" secondAttribute="bottom" constant="10" id="N01-36-yX2"/>
                     <constraint firstItem="cyW-8u-Tr6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="USs-II-I1E"/>
                     <constraint firstItem="PMd-Dd-kgp" firstAttribute="top" secondItem="cyW-8u-Tr6" secondAttribute="bottom" constant="10" id="cBp-pF-dwv"/>
+                    <constraint firstAttribute="trailing" secondItem="cyW-8u-Tr6" secondAttribute="trailing" constant="20" symbolic="YES" id="cG3-68-hLt"/>
                     <constraint firstItem="cyW-8u-Tr6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="ghM-Yf-4xQ"/>
                     <constraint firstItem="PMd-Dd-kgp" firstAttribute="trailing" secondItem="cyW-8u-Tr6" secondAttribute="trailing" id="hXg-fN-GTi"/>
                 </constraints>
