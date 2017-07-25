@@ -7,12 +7,12 @@ This project requires **Xcode 9**. There are no dependencies, so no need for any
 
 ## The Good
 
- Working with the new Swift 4 KVO and `Coding` API worked very well. Nice to finally doing JSON parsing withou a 3rd party library.
+ Working with the new Swift 4 KVO and `Coding` API worked very well. Nice to finally doing JSON parsing without a 3rd party library.
  This was also the first time I worked with `XCTWaiter`.
 
 ## The Bad
 
-The UI does what it is supposed to do. But it doesn't really look nice.
+The UI does what it is supposed to do. But it doesn't really look nice. There is also currently no mechanism for cancelling network requests.
 
 ## The Ugly
 
