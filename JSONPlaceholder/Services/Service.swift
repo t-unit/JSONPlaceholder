@@ -10,7 +10,7 @@ import Foundation
 
 protocol Service {
     
-    associatedtype M: Codable
+    associatedtype M: Decodable
     
     var session: TaskProviding { get }
     var decoder: JSONDecoder { get }

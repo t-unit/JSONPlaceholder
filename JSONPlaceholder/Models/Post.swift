@@ -17,7 +17,7 @@ import Foundation
  }
  */
 
-struct Post: Codable {
+struct Post: Decodable {
 
     private enum CodingKeys: String, CodingKey {
         case userIdentifier = "userId"

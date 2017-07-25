@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-extension CLLocationCoordinate2D: Codable {
+extension CLLocationCoordinate2D: Decodable {
     
     private enum CodingError: Error {
         case invalidDoubleString
@@ -32,11 +32,5 @@ extension CLLocationCoordinate2D: Codable {
         } else {
             throw CodingError.invalidDoubleString
         }
-    }
-    
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(latitude, forKey: .lat)
-        try container.encode(longitude, forKey: .lng)
     }
 }

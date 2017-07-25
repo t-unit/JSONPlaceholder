@@ -35,9 +35,9 @@ import CoreLocation
   }
  */
 
-struct User: Codable {
+struct User: Decodable {
     
-    struct Address: Codable {
+    struct Address: Decodable {
         
         private enum CodingKeys: String, CodingKey {
             case street
@@ -54,7 +54,7 @@ struct User: Codable {
         let coordinate: CLLocationCoordinate2D
     }
     
-    struct Company: Codable {
+    struct Company: Decodable {
         
         let name: String
         let catchPhrase: String
