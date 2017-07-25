@@ -24,13 +24,7 @@ class UsersViewController: UIViewController {
     @IBOutlet
     private weak var errorLabel: UILabel!
     
-    private var errorObserver: NSKeyValueObservation?
-    private var loadingObserver: NSKeyValueObservation?
-    private var userCountObserver: NSKeyValueObservation?
-    
-    deinit {
-        // remove oberservers
-    }
+    private var observers: [NSKeyValueObservation] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,18 +51,21 @@ class UsersViewController: UIViewController {
     }
     
     private func registerObservers() {
-        errorObserver = viewModel.observe(\.errorText) { [weak self] observed, _ in
+        let errorObserver = viewModel.observe(\.errorText) { [weak self] observed, _ in
             self?.errorView.isHidden = observed.errorText == nil
             self?.errorLabel.text = observed.errorText ?? nil
         }
+        observers.append(errorObserver)
         
-        loadingObserver = viewModel.observe(\.isLoading) { [weak self] observed, _ in
+        let loadingObserver = viewModel.observe(\.isLoading) { [weak self] observed, _ in
             self?.loadingView.isHidden = !observed.isLoading
         }
+        observers.append(loadingObserver)
         
-        userCountObserver = viewModel.observe(\.userCount) { [weak self] _, _ in
+        let userCountObserver = viewModel.observe(\.userCount) { [weak self] _, _ in
             self?.tableView.reloadData()
         }
+        observers.append(userCountObserver)
     }
 }
 
