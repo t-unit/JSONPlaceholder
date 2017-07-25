@@ -92,4 +92,12 @@ class UserListViewModelTests: XCTestCase {
         sut.appear()
         XCTAssertFalse(sut.isLoading)
     }
+
+    func testSelectionSetsViewModel() {
+        fakeService.result = Result(value: userList)
+        sut.appear()
+        
+        sut.didSelect(at: IndexPath(row: 0, section: 0))
+        XCTAssertNotNil(sut.postListViewModel)
+    }
 }
